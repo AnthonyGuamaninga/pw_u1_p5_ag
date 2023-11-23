@@ -1,0 +1,69 @@
+const sumar = (n1, n2) => n1 + n2;
+
+const sumarCompleto = () => {
+    var n1 = parseInt(document.getElementById('idnumero1').value);
+    var n2 = parseInt(document.getElementById('idnumero2').value);
+    var resultado = parsear('idnumero1') + parsear('idnumero2');
+    console.log(resultado);
+    document.getElementById('idResultado2').innerText=resultado;
+}
+
+const restarCompleto = () => {
+    var n1 = parseInt(document.getElementById('idnumero1').value);
+    var n2 = parseInt(document.getElementById('idnumero2').value);
+    console.log('Funcion sumar numeros'+n1)
+    console.log('Funcion sumar numeros'+n2)
+    var resultado = n1 - n2;
+    console.log(resultado);
+    document.getElementById('idResultado2').innerText=resultado;
+}
+
+const multiplicarCompleto = () => {
+    var n1 = parseInt(document.getElementById('idnumero1').value);
+    var n2 = parseInt(document.getElementById('idnumero2').value);
+    console.log('Funcion sumar numeros'+n1)
+    console.log('Funcion sumar numeros'+n2)
+    var resultado = n1 * n2;
+    console.log(resultado);
+    document.getElementById('idResultado2').innerText=resultado;
+}
+
+const dividirCompleto = () => {
+    var n1 = parseInt(document.getElementById('idnumero1').value);
+    var n2 = parseInt(document.getElementById('idnumero2').value);
+    console.log('Funcion sumar numeros'+n1)
+    console.log('Funcion sumar numeros'+n2)
+    var resultado = n1 / n2;
+    console.log(resultado);
+    document.getElementById('idResultado2').innerText=resultado;
+}
+
+const cambiarIMG = () => {
+    var resultado = document.getElementById('imangeid').src='../img/img2.jpg';
+    console.log(resultado);
+    document.getElementById('idResultado2').innerText=resultado;
+}
+
+const parsear=(id)=> parseInt(document.getElementById(id).value);
+
+
+function conceptosJs(){
+    let var1 = 10;
+    let var1Texto = 'Texto1';
+    console.log(var1)
+    console.log(var1Texto)
+
+    var var2 = 10;
+    var var2Texto = 10;
+    console.log(var2)
+    console.log(var2Texto)
+
+    const const1 = 10
+    const const2 = 'Texto'
+    console.log(const1)
+    console.log(const2)
+
+}
+
+const diasSemana=["Lunes","Martes","Miercoles","Jueves","Viernes"]
+console.log(diasSemana)
