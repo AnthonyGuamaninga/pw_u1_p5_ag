@@ -63,7 +63,104 @@ function conceptosJs(){
     console.log(const1)
     console.log(const2)
 
+    const diasSemana=["Lunes","Martes","Miercoles","Jueves","Viernes"];
+    console.log(diasSemana)
+    console.log(diasSemana[0])
+    console.log(diasSemana[4])
+    console.log(diasSemana[5])
+    diasSemana[5]="Sabado"
+    console.log(diasSemana[5])
+    diasSemana.push("Domingo")
+    console.log(diasSemana)
+    diasSemana.unshift("FeriadoS")
+    const edades = [1,2,3,4,5]
+    console.log(edades)
+    const edades2 = [6,7,8]
+    const edadesFinales = edades.concat(edades2)
+    console.log(edadesFinales)
+
+    for(const dia of diasSemana){
+        console.log(dia)
+        if(dia === 'Martes'){
+            console.log('martes 2x1')
+        }
+    }
+
+
+    // Declaracion de Objetos
+    const estudiante = {
+        nombre:"Anthony",
+        apellido:"Guamaninga",
+        edad:22,
+        genero:"M",
+        ciudad:"Quito"
+    }
+    console.log(estudiante)
+    console.log(estudiante.apellido)
+    estudiante.nombre="Alfred"
+    console.log(estudiante.nombre)
+
+    const persona = {
+        nombre:"Anthony",
+        apellido:"Yaguache",
+        edad:22,
+        direccion:{
+            callePrincipal:"cacha",
+            calleSecundaria:"Mortillo",
+            numeracion:"OE3-50",
+            barrio:"Juliana"
+        }
+    }
+    console.log(persona)
+    console.log(persona.direccion)
+    console.log(persona.direccion.callePrincipal)
+
+    
+    const paciente1 = {
+        nombre : "Carlos",
+        tipoSangre : "O+",
+        direccion: "Centro de Quito"
+    }
+    const paciente2 = {
+        nombre : "Daniela",
+        tipoSangre : "A-",
+        direccion: "El bosque"
+    }
+    const paciente3 = {
+        nombre : "Samantha",
+        tipoSangre : "O-",
+        direccion: "Carapungo"
+    }
+    const internados = [paciente1,paciente2,paciente3]
+    console.table(internados)
+
+    //Arreglo de 4 pacientes con 2 atributos c/u
+    const paciente = [{nombre:"Anthony",apellido:"Guamaninga"},
+    {nombre:"Alfred",apellido:"Yaguache"},
+    {nombre:"Carla",apellido:"Bernal"}]
+    console.log(paciente[0].nombre)
+
+    paciente.pop()
+    console.table(paciente)
+
+    //desestructuracion de arreglos
+    const diasSemana2 =["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"]
+    const [dia1,dia2,dia3,dia4,dia5]=diasSemana2
+    console.log(dia1)
+    console.log(dia5)
+
+        //optimizado
+    const [d1,d2,d3,d4,d5]=["Lunes1", "Martes", "Miercoles", "Jueves", "Viernes"]
+    console.log(d1)
+    console.log(d5)
+
+    //Desestructuración de objetos 
+    const vehiculo= {marca:"kia", modelo:"europa", anio:"2023"}
+    const {marca,modelo,anio} = vehiculo
+    console.log(marca)
+
+    const {tipo,material,vendedor} = {tipo:"Departamento", material:"ladrillo", vendedor:{nombre:"roberto", edad:"45 años"} }
+    console.log(tipo)
+    console.log(vendedor.edad)
 }
 
-const diasSemana=["Lunes","Martes","Miercoles","Jueves","Viernes"]
-console.log(diasSemana)
