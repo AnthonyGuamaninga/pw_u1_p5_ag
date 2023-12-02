@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/CalculadoraDos.css">
+    <script src="../js/calculadoraDos.js"></script>
 </head>
 
 <body>
@@ -15,27 +16,27 @@
     <section>
         <div class="container">
             <div class="calculadora">
-                <div class="display">
-                    Resultado
+                <div  class="display">
+                    <label id="idResultado" for=""></label>
                 </div>
-                <button>C</button>
-                <button>&#10229;</button>
-                <button>&#37;</button>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>X</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>&#8722;</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>&#43;</button>
-                <button>0</button>
-                <button>&#46;</button>
-                <button>&#61;</button>
+                <button id="idRestaurar" onclick="obtenerCantidad('R')" class="btn_c">C</button>
+                <button id="idRestaurar" onclick="obtenerCantidad('R')">&#10229;</button>
+                <button id="idDivision" onclick="obtenerCantidad('/')">&#247;</button>
+                <button id="num7" onclick="obtenerCantidad(7)">7</button>
+                <button id="num8" onclick="obtenerCantidad(8)">8</button>
+                <button id="num9" onclick="obtenerCantidad(9)">9</button>
+                <button id="idMultiplicacion" onclick="obtenerCantidad('*')">X</button>
+                <button id="num4" onclick="obtenerCantidad(4)">4</button>
+                <button id="num5" onclick="obtenerCantidad(5)">5</button>
+                <button id="num6" onclick="obtenerCantidad(6)">6</button>
+                <button id="idResta" onclick="obtenerCantidad('-')">&#8722;</button>
+                <button id="num1" onclick="obtenerCantidad(1)">1</button>
+                <button id="num2" onclick="obtenerCantidad(2)">2</button>
+                <button id="num3" onclick="obtenerCantidad(3)">3</button>
+                <button id="idSuma" onclick="obtenerCantidad('+')">&#43;</button>
+                <button id="num0" onclick="obtenerCantidad(0)" class="btn_0">0</button>
+                <button id="idPunto" onclick="obtenerCantidad('.')">&#46;</button>
+                <button id="idRespuesta" onclick="obtenerCantidad('=')">&#61;</button>
             </div>
         </div>
     </section>
