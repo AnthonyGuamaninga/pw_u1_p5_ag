@@ -1,6 +1,16 @@
 console.log("elementos Vue");
 console.log(Vue);
 
+const estudiantes = [{nombre:'Alfred',apellido:'Guamaninga'},
+{nombre:'Joel',apellido:'Torres'},
+{nombre:'Valeria',apellido:'Padilla'},
+{nombre:'Brenda',apellido:'Lour'},
+{nombre:'Gabriel',apellido:'Jacome'}]
+console.log(estudiantes);
+console.table(estudiantes)
+
+
+
 const app = Vue.createApp({
     /*template: `
     <h1>Hola mundo</h1>
@@ -10,24 +20,46 @@ const app = Vue.createApp({
     <p>{{true?'verdadero':'falso'}}</p>
     `*/
     // OPTIONS API
-    methods: {
+
+    methods:{
         cambiarMensaje(){
-            console.log("Se está cambiando el mensaje")
+            console.log("Se esta cambiando el mensaje")
             console.log(this.mensaje)
-            this.mensaje='Valor cambiado tal'
-            console.log(this.mensaje);
+            this.mensaje="Valor cambiado"
         },
         cambiarNumero(){
+            this.valor+=1
+        },
+        agregarEstudiante(){
+            console.log('Agregando estudiante');
+            this.lista.push({nombre:this.nombre , apellido:this.apellido})
+        },
+        presionandoTecla(event){
+            console.log('presionando...');
+            console.log(event.charCode);
+        },
+        presionandoEnter(event){
+            if(event.charCode===13){
+                console.log('agregando ingreso');
+                this.agregarEstudiante()
+            }
             
+        },
+        editarEstudiante(){
+            console.log('editando estudiante ...');
+            const estu = {nombre:this.nombre, apellido:this.apellido}
         }
     },
-    watch: {
-
+    watch:{
+ 
     },
     data(){
         return{
-            mensaje: 'Hola mundo desde Vue.JS',
-            valor: 100
+            mensaje:'Hola mundo desde Vue.js',
+            valor:100,
+            lista: estudiantes,
+            nombre: null,
+            apellido: null
         }
     }
 })

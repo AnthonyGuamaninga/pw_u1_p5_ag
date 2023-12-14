@@ -24,6 +24,17 @@
             <p>{{valor}}</p>
             <button v-on:click="cambiarMensaje">Cambiar mensaje</button>
             <button v-on:click="cambiarNumero">Sumar</button>
+            <hr/>
+            <p>{{lista}}</p>
+            <label for="idNombre">Nombre: </label>
+            <input v-on:keypress="presionandoTecla" id="idNombre" type="text" v-model="nombre">
+            <label for="idApellido">Apellido: </label>
+            <input v-on:keypress="presionandoEnter" id="idApellido" type="text" v-model="apellido">
+            <button v-on:click="agregarEstudiante">Agregar</button>
+            {{nombre}}
+            <ul>
+                <li v-for="({nombre, apellido}, index) in lista">{{index+1}}: {{nombre}} - {{apellido}} <button v-on:click="editarEstudiante">editar</button></li>
+            </ul>
         </div>
     </section>
     <footer></footer>
