@@ -27,13 +27,18 @@
             <hr/>
             <p>{{lista}}</p>
             <label for="idNombre">Nombre: </label>
-            <input v-on:keypress="presionandoTecla" id="idNombre" type="text" v-model="nombre">
+            <input id="idNombre" type="text" v-model="nombre">
             <label for="idApellido">Apellido: </label>
-            <input v-on:keypress="presionandoEnter" id="idApellido" type="text" v-model="apellido">
-            <button v-on:click="agregarEstudiante">Agregar</button>
+            <input @keypress.enter="agregarEstudianteMod" id="idApellido" type="text" v-model="apellido">
+            <button @click="agregarEstudiante">Agregar</button>
             {{nombre}}
-            <ul>
-                <li v-for="({nombre, apellido}, index) in lista">{{index+1}}: {{nombre}} - {{apellido}} <button v-on:click="editarEstudiante">editar</button></li>
+            {{apellido}}
+            <ul v-for="({nombre, apellido}, index) in lista">
+                <li v-if="nombre!=='' " >{{index+1}}: {{nombre}} - {{apellido}}  
+                    {{lista.nombre!==''}}
+                    {{nombre!==''}}
+                    <button v-if="nombre!==undefined" v-on:click="editarEstudiante">editar</button>
+                </li>
             </ul>
         </div>
     </section>
