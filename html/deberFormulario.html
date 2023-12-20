@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estudianteFormulario.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+ 
+<body>
+    <div class="container">
+        <div id="appFormulario">
+            <header>
+                <h1>Registro de estudiante</h1>
+            </header>
+            <nav></nav>
+            <section>
+                <div class="form" >
+                    <h2>Nuevo Estudiante</h2>
+                    <p type="Nombre:"><input type="" v-model="nombre"></p>
+                    <p type="Apellido:"><input type="text"v-model="apellido"></p>
+                    <p type="Hobby:"><input type="text"v-model="hobby"></p>
+                    <p type="Género:"><input type="text"v-model="genero"></p>
+                    <p type="País:"><input type="text"v-model="pais"></p>
+                    <div class="bot">
+                        <button @click="agregarEstudiante">GUARDAR</button>
+                    </div>
+                </div>
+                <div class="container-table">
+                    <h1>Tabla de estudiantes</h1>
+                    <table>
+                        <tr class="atributos">
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Hobby</th>
+                            <th>Género</th>
+                            <th>País</th>
+                        </tr>
+ 
+                        <tr v-for="({nombre,apellido,hobby,genero,pais}) in lista">
+                            <td>{{nombre}}</td>
+                            <td>{{apellido}}</td>
+                            <td>{{hobby}}</td>
+                            <td>{{genero}}</td>
+                            <td>{{pais}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <footer></footer>
+        </div>
+ 
+    </div>
+    <script src="../js/appFormulario.js"></script>
+</body>
+ 
+</html>

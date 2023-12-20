@@ -62,3 +62,20 @@ button{
 button:hover{
     background-color: rgb(194, 194, 194);
 }
+.container-table{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    background-color: #c7c7f0;
+    border-radius: 10px;
+    align-items: center;
+
+}
+.atributos{
+    background-color: #40a4e7;
+    color: white;
+
+}
